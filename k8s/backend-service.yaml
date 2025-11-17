@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: travel-backend
+spec:
+  type: NodePort
+  selector:
+    app: travel-backend
+  ports:
+  - port: 8081
+    targetPort: 8081
+    nodePort: 30081
